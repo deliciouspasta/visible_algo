@@ -21,8 +21,8 @@ class FrameBase(tk.Tk):
     def change(self, frame):
         self.frame.pack_forget() # delete currrent frame
         #キャストではなくただの関数の呼び出しによるオブジェクトの代入
-        #self.StartPageFrame(self)=TransitionRoutine(Applist[r][c][0])↓?
-        #つまりはself.frame = TransitionRoutine(Applist[r][c][0])ということ？↓
+        #self.StartPageFrame(self)=TransitionRoutine(Applist[r][c][0])↓
+        #つまりはself.frame = TransitionRoutine(Applist[r][c][0])ということ↓
         self.frame = frame(self)
         self.frame.pack(expand=True, fill="both") # make new frame
 
